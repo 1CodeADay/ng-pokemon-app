@@ -1,0 +1,8 @@
+<h1>Pokemon List</h1>
+<input
+  type="number"
+  (click)="selectPokemon($event)">
+
+<p>{{pokemonList[3].name}}</p>
+<p>{{pokemonList[3].hp}}</p>
+<img [src]="pokemonList[3].picture">
