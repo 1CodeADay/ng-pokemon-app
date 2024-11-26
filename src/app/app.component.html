@@ -1,20 +1,29 @@
 <h1>Pokemon List</h1>
 <input
   #input
-  (keyup)="selectPokemon(input.value) "
+  (keyup.enter)="selectPokemon(input.value) "
   type="number"
   />
-<p>{{pokemonSelected?.name}}</p>
 
-<p>{{pokemonList[0].name}}</p>
-<p>{{pokemonList[1].name}}</p>
-<p>{{pokemonList[2].name}}</p>
-<p>{{pokemonList[3].name}}</p>
-<p>{{pokemonList[4].name}}</p>
-<p>{{pokemonList[5].name}}</p>
-<p>{{pokemonList[6].name}}</p>
-<p>{{pokemonList[7].name}}</p>
-<p>{{pokemonList[8].name}}</p>
-<p>{{pokemonList[9].name}}</p>
-<p>{{pokemonList[10].name}}</p>
-<p>{{pokemonList[11].name}}</p>
+<p *ngIf="pokemonSelected">
+  You selected the Pokémon: {{ pokemonSelected?.name }}
+</p>
+<p *ngIf="!pokemonSelected">
+  No Pokémon selected yet. Please choose a Pokémon.
+</p>
+<p *ngFor="let pokemon of pokemonList">{{pokemon.name}}</p>
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col s12 m4 l3" *ngFor="let pokemon of pokemonList">
+      <div class="card">
+        <div class="card-content">
+          <img class="circle responsive-img" src="{{ pokemon.picture }}" alt="a cute pokemon">
+          <span class="card-title">{{ pokemon.name }}</span>
+          <p>{{ pokemon.created }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
