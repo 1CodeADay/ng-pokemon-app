@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: 'app.component.html',
-})
+})``
 
 export class AppComponent implements OnInit {
   pokemonList: Pokemon[] = POKEMONS;
