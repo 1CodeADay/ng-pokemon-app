@@ -1,11 +1,13 @@
 <h1 class="center">Pokemon List</h1>
-
+<input
+type="text"
+>
 <div class="container">
   <div class="row">
     <div class="col s12 m4 l3" *ngFor="let pokemon of pokemonList">
 
-        <div class="card horizontal">
-          
+        <div class="card horizontal" (click)="selectPokemon(Pokemon)" pkmnBorderCard>
+
           <div class="card-image">
             <img class="responsive-img" src="{{ pokemon.picture }}">
           </div>
