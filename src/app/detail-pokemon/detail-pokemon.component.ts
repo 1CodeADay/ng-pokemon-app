@@ -23,9 +23,7 @@ export class DetailPokemonComponent implements OnInit {
       this.pokemon = this.pokemonList.find(pokemon => pokemon.id === +pokemonId);
     }
   }
-
   goToPokemonList() {
-    this.router.navigate(['/pokemons']);
+    this.router.navigate(['/pokemons'])
   }
-
 }
