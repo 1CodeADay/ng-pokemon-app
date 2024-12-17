@@ -6,19 +6,19 @@ import { delay, Observable, of, tap } from 'rxjs';
 })
 export class AuthService {
 
-  IsLoggedIn: boolean = false;
+  isLoggedIn: boolean = false;
   redirectUrl: string;
 
   login(name: string, password: string): Observable<boolean> {
-    const IsLoggedIn = (name == 'pikachu' && password === 'pikachu');
+    const isLoggedIn = (name == 'pikachu' && password === 'pikachu');
 
-    return of(IsLoggedIn).pipe(
+    return of(isLoggedIn).pipe(
       delay(1000),
-      tap(IsLoggedIn => this.IsLoggedIn = IsLoggedIn)
+      tap(isLoggedIn => this.isLoggedIn = isLoggedIn)
     );
   }
 
   logout() {
-    this.IsLoggedIn = false;
+    this.isLoggedIn= false;
   }
 }
