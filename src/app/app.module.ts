@@ -25,8 +25,8 @@ import { LoginComponent } from './login/login.component';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
     PokemonModule,
     AppRoutingModule
-
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
